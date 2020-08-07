@@ -1,0 +1,101 @@
+.main{
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/payResult-bg.jfif) no-repeat;
+  background-size: cover;
+  margin-bottom: 60px;
+  background-position: 0 -80px;
+  @include iPad(){
+    height: 400px;
+    margin-bottom: 0;
+  }
+  @include mobile(){
+    height: 500px;
+    background-position: -120px 0;
+  }
+  @include iPhone6(){
+    height: 518px;
+    background-position: -200px 0;
+  }
+  .data-title{
+    width: 190px;
+    position: relative;
+    margin-bottom: 52px;
+    .check_circle{
+      width: 190px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: -11px;
+      li{
+        padding-right: 48px;
+        margin-bottom: 30px;
+        &:last-child{
+          padding-right: 0;
+        }
+      }
+      img{
+        width: 20px;
+        height: 20px;
+      }
+      hr{
+        width: 66px;
+        height: 1px;
+        border: none;
+        background-color: $color-darkgreen;
+        position: absolute;
+        top: -2px;
+        left: 20px;
+      }
+      .border{
+        left: 105px;
+      }
+    }
+    .check_text{
+      margin-top: 30px;
+    }
+  }
+  .continue-shopping{
+    width: 300px;
+    font-size: $text-l;
+    font-weight: bold;
+    color: $color-darkgreen;
+    background: $color-yellow;
+    transition: .5s;
+    border: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    cursor: pointer;
+    &:hover{
+      background: $color-darkgreen;
+      color: $color-yellow;
+    }
+    @include iPad(){
+      display: none;
+    }
+  }
+}
+.continue-shopping-mb{
+  display: none;
+  width: 100%;
+  font-size: $text-l;
+  font-weight: bold;
+  color: $color-darkgreen;
+  background: $color-yellow;
+  transition: .5s;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  cursor: pointer;
+  &:hover{
+    background: $color-darkgreen;
+    color: $color-yellow;
+  }
+  @include iPad(){
+    display: block;
+  }
+}

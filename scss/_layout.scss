@@ -1,0 +1,235 @@
+.container{
+  max-width: 940px;
+  margin: 0 auto;
+  @include iPad(){
+    width: 100%;
+  }
+}
+
+/*------ header Start ------*/
+.header{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  @include iPad(){
+    justify-content: space-around;
+  }
+  h1{
+    @include iPad(){
+      display: none;
+    } 
+    a{
+      width: 220px;
+      height: 40px;
+      background-image: url(../images/logo-all-dark.svg);
+      background-repeat: no-repeat;
+      display: block;
+      @include replaceText;
+    }
+  } 
+  .buttonBar{
+    display: none;
+    @include iPad(){
+      display: block;
+      cursor: pointer;
+    }
+  }
+  .logoType{
+    display: none;
+    @include iPad(){
+      display: block;
+      width: 30%;
+    }    
+  }
+  nav{
+  display: flex;
+  align-items: center;  
+    .link-items{
+      display: flex;
+      align-items: center;
+      max-height: 0px;
+      @include iPad(){
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        transition: all 0.8s;
+        overflow: hidden;
+        background: white;
+        flex-direction: column;
+      }
+    }
+    .shop{
+      padding-left: 19px; 
+      img{
+        @include iPad(){
+          padding: 0;    
+        }
+        &:hover{
+          opacity: 0.5;
+        }    
+      }  
+    }
+    a{
+      text-decoration: none;
+      color: $color-darkgreen;
+      font-size: $text-s;
+      font-weight: bold;
+      &:hover{
+        color: gray;
+        transition: 0.1s;  
+      }    
+    }
+    .active{
+      @include iPad(){
+      max-height: 200px;
+      z-index: 10;
+      }
+    }
+  }
+  .link{
+    padding-right: 60px;
+    @include iPad(){
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+      &:hover{
+        background-color: pink;
+      }
+    }
+    a{
+      @include iPad(){
+        font-size: $text-l;
+      }
+    }        
+  }
+}
+/*------ header End ------*/
+
+
+/*------ footer Start ------*/
+.container-footer{
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.footer-top{
+  color: $color-whitegray;
+  background-color: $color-darkgreen;
+  padding: 30px 0; 
+}
+
+.footer-subscribe{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $color-darkgreen;
+  @include iPad(){
+    flex-direction: column;
+    align-items: center;
+  }
+  ul{
+    display: flex;
+    align-items: center;
+  }
+  img{
+    width: 40px;     
+  }
+  h2{
+    color: $color-whitegray;
+    line-height: 29px;
+    padding-left: 20px;    
+  }
+}
+
+.footer-email{
+  @include iPad(){
+    margin-top: 30px;
+  }
+  form{
+    display: flex;
+  }
+  .inputEmail{
+    border: none;
+    background: $color-whitegray url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/mail-24px.png?raw=true) no-repeat 20px 16px;
+    padding: 16px 30px 16px 64px;
+  }
+  .submit{
+    border: none;
+    background: $color-yellow;
+    padding: 16px 20px;   
+  }
+}
+
+.footer-under{
+  color: $color-darkgreen;
+  background-color: $color-whitegray;
+  padding: 30px 0;    
+}
+
+.footer-information{
+  display: flex;
+  justify-content: space-between;
+  background: $color-whitegray; 
+  @include iPad(){
+    flex-direction: column;
+    padding: 0 12%;
+  } 
+  .left-Data{
+    display: flex;
+    flex-direction: column;
+    img{
+      width: 171px;    
+    }   
+    .aboutData{
+        font-size: $text-s;
+        color: $color-darkgreen;
+        line-height: 24px;
+        margin-top: 115.5px;
+        @include iPad(){
+          margin-top: 39.5px;  
+        }
+    }
+    .imgData{
+      display: flex;
+      li{
+        width: 32px;
+        margin-top: 32px;
+        margin-right: 8px;
+        @include iPad(){
+          margin-top: 37px;  
+        }  
+      }     
+    }
+  }
+  .right-Data{
+    display: flex;
+    flex-direction: column;
+    color: $color-darkgreen;
+    @include iPad(){
+      align-items: flex-start;
+    }
+    h3{
+      font-size: $text-m;
+      line-height: 35px;
+      font-weight: bold;
+      text-indent: -11px;
+      writing-mode: vertical-rl;
+      letter-spacing: 6.5px;  
+      @include iPad(){
+        display: none;
+      }  
+    }
+    p{
+      font-family: Times;
+      font-size: $text-s;
+      line-height: 19px;
+      margin-top: 46px;
+      @include iPad(){
+        margin-top: 23px;
+      }
+    }
+  }
+}
+/*------ footer End ------*/

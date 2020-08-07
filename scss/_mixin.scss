@@ -1,0 +1,40 @@
+/*------ 常用變數設定 ------*/
+$text-s: 16px;
+$text-m: 20px;
+$text-l: 24px;
+$color-whitegray: #EAF0ED;
+$color-darkgreen: #3F5D45;
+$color-yellow: #FFE180;
+
+/*------ 圖片取代文字 ------*/
+@mixin replaceText {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;    
+}
+
+
+/*------ RWD Start ------*/
+
+/*--- iPad_size ---*/
+@mixin iPad {
+  @media (max-width:768px){
+    @content;
+  }
+}
+
+/*--- RWD mobile ---*/
+@mixin mobile {
+  @media (max-width:578px){
+    @content;
+  }
+}
+
+/*--- RWD iPhone6 ---*/
+@mixin iPhone6 {
+  @media (max-width:375px){
+    @content;
+  }
+}
+
+/*------ RWD End ------*/

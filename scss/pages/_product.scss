@@ -1,0 +1,186 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    @include iPad(){
+      flex-direction: column;
+    }
+}
+
+.menu{
+  width: 32%;
+  @include iPad(){
+    width: auto;  
+  }
+  @include mobile(){
+    width: auto;
+  }
+  h3{
+    text-align: center;
+    font-weight: bold;
+    color: $color-whitegray;
+    background: $color-darkgreen;
+    padding: 16px 0;
+  }   
+  ul{
+    text-align: center;
+    font-weight: bold;
+    @include iPad(){
+      display: flex;
+      flex-wrap: wrap;   
+    }
+    li{
+      background: white;
+      padding: 16px 0;
+      border: 1px solid $color-whitegray;
+      &:hover{
+        background: $color-whitegray;
+        transition: 0.2s; 
+      }
+      @include iPad(){
+        width: 50%;
+      }
+      @include mobile(){
+        width: 100%;
+      }
+      a{
+        text-decoration: none;
+        color: $color-darkgreen;
+        display: block;  
+      }  
+    }
+    .menu-click{
+      background: $color-whitegray;  
+    }
+  } 
+}
+
+.menuProducts{
+  width: 66%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include iPad(){
+    width: 100%;
+    justify-content: space-evenly;;
+    margin-top: 30px;
+  }
+  @include mobile(){
+    justify-content: center;  
+  }
+}
+
+.productList{
+  width: 48%;
+  margin-bottom: 20px;
+  position: relative;
+  @include iPad(){
+    width: 45%;
+    margin: 0 10px 20px;
+  }
+  @include mobile(){
+    width: 70%;  
+  } 
+  .todayChoice{
+    color: $color-whitegray;
+    background: $color-darkgreen;
+    writing-mode: vertical-lr;
+    font-size: $text-s;
+    font-weight:  bold;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 6px;
+    position: absolute;
+    top: 0;
+    left: 20px;    
+  }
+  .favorite{
+    img{
+      position: absolute;
+      top: 19px;
+      right: 22px;   
+    }
+  } 
+  .productIntro{
+    display: flex;
+    font-size: $text-m;
+    color: $color-darkgreen;
+    text-align: center;
+    border: 1px solid $color-whitegray;
+    h3{
+      width: 50%;  
+      border-right: 1px solid $color-whitegray;
+      padding: 20px 0;
+    }
+    span{
+      width: 50%;  
+      font-weight: bold;
+      padding: 20px 0;  
+    }
+  }
+  .add-shoppingCart{
+    width: 100%;
+    color: $color-darkgreen;
+    font-size: $text-l;
+    font-weight: bold;
+    border: none;
+    background: $color-whitegray;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    cursor: pointer;
+    &:hover{
+      color: white;
+      background: red;
+      transition: 0.5s;  
+    }
+  }
+  .productPic{
+    img{
+      @include iPad(){
+        width: 100%;   
+      }
+    }
+  }
+}
+
+.page{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  @include iPad(){
+    justify-content: center;    
+  }
+  ul{
+    font-size: $text-m;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-whitegray;
+    li{
+      &+li{
+        border-left: 1px solid $color-whitegray;    
+      }
+      &:nth-child(1) :hover, &:nth-child(n+3) :hover{
+        background-color: $color-whitegray;
+        transition: 0.2s;
+      }
+      a{
+        width: 60px;
+        height: 60px;
+        text-decoration: none;
+        color: $color-darkgreen;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+      }
+    }    
+  }
+  .page-click{
+    color: color-whitegray;
+    background: color-darkgreen;
+    font-weight: bold;    
+  }
+}
+
